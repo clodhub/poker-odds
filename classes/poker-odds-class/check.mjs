@@ -1,0 +1,23 @@
+import { assert, load } from './runtime.mjs';
+const { createOdds } = await load('server/index.ts');
+const ranks = '23456789TJQKA', suits = 'cdhs';
+const codes = { ranks, suits, rankOf: card => ranks.indexOf(card[0]), suitOf: card => suits.indexOf(card[1]), fullDeck: () => [...ranks].flatMap(rank => [...suits].map(suit => rank + suit)) };
+const odds = createOdds({ codes });
+assert.equal(odds.startingScore(['Ac', 'Ad']), 20);
+assert.equal(odds.startingScore(['Ac', 'Kc']), 12);
+assert.equal(odds.startingScore(['7c', '2d']), -1);
+const known = ['Ah', 'Kh', 'Qh', 'Jh', '2c', '7d'];
+assert.ok(Math.abs(odds.chance('royalFlush', [{ rank: 'T', suit: 'h' }], known, 1) - 1 / 46) < 1e-12);
+assert.equal(odds.chance('highCard', [], known, 1), 1);
+assert.deepEqual(odds.rows(['Ac'], []), []);
+const oracle = { codes, evaluate: () => ({ category: 'pair', ranks: [12, 11, 10, 9], name: 'Pair of aces', score: 1 }),
+  bestFive: () => ['As', 'Ah', 'Ks', 'Qd', 'Jc'], patternCards: () => ['As', 'Ah'] };
+const river = createOdds(oracle);
+const hole = ['As', 'Ah'], board = ['Ks', 'Qd', 'Jc', '7d', '2s'];
+const rows = river.rows(hole, board);
+assert.equal(rows.length, 1);
+assert.equal(rows[0].category, 'pair');
+assert.equal(rows[0].probability, 1);
+assert.deepEqual(rows[0].cards.map(card => card.code).sort(), ['As', 'Ah', 'Ks', 'Qd', 'Jc'].sort());
+assert.equal(river.rows(hole, board), rows);
+assert.equal(river.winChance(hole, board, 0, 10, () => 0.5), 1);
