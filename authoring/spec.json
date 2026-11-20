@@ -1,6 +1,6 @@
 {
   "name": "poker-odds",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "title": "Poker odds",
   "description": "Winning and improvement chances for teaching and display: what a hand can still become with the exact chance, the chance of holding the best hand against opponents, and Chen's starting score.",
   "facilities": [
@@ -102,13 +102,17 @@
     {
       "reference": {
         "name": "ourapps-ae/poker-odds-class",
-        "version": "1.0.0",
-        "digest": "22b7237f5d3976a16e4bc4bad71ccc4deb5df2e37091614d156d333bb56388e5"
+        "version": "1.1.0",
+        "digest": "c0de3f22c6ba01ddfd6350554867e8163d438a76803d768f9089a8161a1466e4"
       },
       "descriptor": {
-        "format": 1,
+        "format": 2,
         "name": "ourapps-ae/poker-odds-class",
-        "version": "1.0.0",
+        "version": "1.1.0",
+        "title": "Poker odds",
+        "summary": "Winning chances of each hand from the cards that are known",
+        "category": "games/cards/poker",
+        "presentation": "none",
         "provides": [
           {
             "type": "ae/poker-odds",
@@ -191,8 +195,8 @@
   "implements": [
     {
       "name": "ourapps-ae/poker-odds-class",
-      "version": "1.0.0",
-      "digest": "22b7237f5d3976a16e4bc4bad71ccc4deb5df2e37091614d156d333bb56388e5"
+      "version": "1.1.0",
+      "digest": "c0de3f22c6ba01ddfd6350554867e8163d438a76803d768f9089a8161a1466e4"
     }
   ],
   "upstream": [],
@@ -256,5 +260,11 @@
         "manual": "Without the package manager, install Node 26 from nodejs.org (the installer, or the zip or tar archive with its folder put first on PATH); on Linux also from the NodeSource repository."
       }
     ]
-  }
+  },
+  "release": {
+    "channel": "features",
+    "fixes": []
+  },
+  "images": [],
+  "vulnerabilityWaivers": []
 }
