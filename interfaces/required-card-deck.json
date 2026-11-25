@@ -600,7 +600,7 @@
           "$ref": "#/components/schemas/CardCodes"
         }
       },
-      "x-ourapps-constant": true,
+      "x-clodhub-constant": true,
       "tags": [
         {
           "name": "server"
@@ -768,7 +768,7 @@
         "required": [
           "shuffle"
         ],
-        "x-ourapps-interface": "ae/random-source"
+        "x-clodhub-interface": "ae/random-source"
       },
       "CardCodes": {
         "type": "object",
@@ -866,7 +866,7 @@
       }
     }
   },
-  "x-ourapps-modules": {
+  "x-clodhub-modules": {
     "web": "web/index.ts",
     "server": "server/index.ts",
     "android": "android/src/main/java",

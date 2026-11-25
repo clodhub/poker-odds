@@ -3,7 +3,7 @@
 ## For the agent
 Select this component when the application teaches or displays hand chances, and always when poker-strategy is selected. Connect its hand-ranking input to poker-hand-ranking and its card-deck input to the application's card-deck. Leave the settings at their defaults unless the pre-flop rows are too slow or too coarse.
 
-- Select package `ourapps-ae/poker-odds` version `0.10.0`.
+- Select package `clodhub/poker-odds` version `0.11.0`.
 - Settings to configure:
   - `sampleBoards` (integer; optional; default `2000`)
   - `cacheSize` (integer; optional; default `500`)
@@ -19,4 +19,4 @@ No accounts or keys. `sampleBoards` (default 2000) is the number of pre-flop boa
 From the component directory:
 
 - `node --test tests/server.test.ts` (web, required-local; tools: node 26.5)
-- `python3 -m aepm review <digest> --store STORE --policy POLICY --trusted --allow-network` checks an archive fetched with `python3 -m aepm fetch ourapps-ae/poker-odds@VERSION --store STORE --from https://ourapps.app` and runs its suites.
+- `python3 -m aepm review <digest> --store STORE --policy POLICY --trusted --allow-network` checks an archive fetched with `python3 -m aepm fetch clodhub/poker-odds@VERSION --store STORE --from https://clodhub.com` and runs its suites.

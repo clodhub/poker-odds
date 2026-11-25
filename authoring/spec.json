@@ -1,6 +1,6 @@
 {
   "name": "poker-odds",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "title": "Poker odds",
   "description": "Winning and improvement chances for teaching and display: what a hand can still become with the exact chance, the chance of holding the best hand against opponents, and Chen's starting score.",
   "facilities": [
@@ -59,12 +59,12 @@
         "tests/server.test.ts"
       ],
       "tools": {
-        "node": "26.5.0"
+        "node": "26.5"
       }
     }
   ],
   "tools": {
-    "node": "26.5.0"
+    "node": "26.5"
   },
   "platforms": [
     "server"
@@ -101,13 +101,13 @@
   "classes": [
     {
       "reference": {
-        "name": "ourapps-ae/poker-odds-class",
+        "name": "clodhub/poker-odds-class",
         "version": "1.1.0",
-        "digest": "c0de3f22c6ba01ddfd6350554867e8163d438a76803d768f9089a8161a1466e4"
+        "digest": "f0bd43603f8c506f7265130438433fe094ed3f09e39d8e90371dd9d5c6c1c1be"
       },
       "descriptor": {
         "format": 2,
-        "name": "ourapps-ae/poker-odds-class",
+        "name": "clodhub/poker-odds-class",
         "version": "1.1.0",
         "title": "Poker odds",
         "summary": "Winning chances of each hand from the cards that are known",
@@ -158,7 +158,7 @@
           },
           {
             "path": "classes/poker-odds-class/poker-odds.json",
-            "digest": "5000cef4a0cacc4a05c44e2cbd97a3205c22c93818bb3d1d401f539fd1613a67"
+            "digest": "660568833de47e06371d675b5d3a82f08efe89e0636ad6f19b5b9cec67e16bd9"
           },
           {
             "path": "classes/poker-odds-class/runtime.mjs",
@@ -194,9 +194,9 @@
   ],
   "implements": [
     {
-      "name": "ourapps-ae/poker-odds-class",
+      "name": "clodhub/poker-odds-class",
       "version": "1.1.0",
-      "digest": "c0de3f22c6ba01ddfd6350554867e8163d438a76803d768f9089a8161a1466e4"
+      "digest": "f0bd43603f8c506f7265130438433fe094ed3f09e39d8e90371dd9d5c6c1c1be"
     }
   ],
   "upstream": [],
@@ -216,10 +216,10 @@
     "owners": [
       "Level N Ltd"
     ],
-    "contact": "https://github.com/ourapps-ae/poker-odds/issues",
-    "repository": "https://github.com/ourapps-ae/poker-odds",
+    "contact": "https://github.com/clodhub/poker-odds/issues",
+    "repository": "https://github.com/clodhub/poker-odds",
     "updates": {
-      "source": "https://github.com/ourapps-ae/poker-odds/releases",
+      "source": "https://github.com/clodhub/poker-odds/releases",
       "strategy": "manual"
     }
   },

@@ -1,6 +1,6 @@
 # Source mapping
 
-Reference revision: `19905b75dbea89fbfd424d67fe26c81aaed0e018`. Extraction source: the `recipe/` folder of `ourapps-ae/OurPoker`; paths below are relative to it.
+Reference revision: `19905b75dbea89fbfd424d67fe26c81aaed0e018`. Extraction source: the `recipe/` folder of `clodhub/OurPoker`; paths below are relative to it.
 
 - `implementation/server/odds.ts` <- `server/src/odds.ts` lines 1-303 (`odds`, `compute`, `choose`, `chance`, `seeded`, `shownCards`, `made`, `readingOrder`, `makeup`; `patternCards` and `bestFive` at lines 261-303 now live in poker-hand-ranking) and `server/src/bot.ts` lines 29-79 (`chen`, `equity`).
   - Generalised: module functions became `createOdds(ranking, settings)`; card codes, deck and evaluation come from the hand-ranking interface; `odds` is `rows`; Chen's `chen` is `startingScore`; `equity` is `winChance`; the fixed 2000 pre-flop boards and the 500-entry cache became the settings `sampleBoards` and `cacheSize` (defaults unchanged). The wire types `OddsCard` and `OddsRow` (from `server/src/contract.ts` lines 159-175) are in `implementation/server/types.ts`. Results are identical to the recipe: 60 random spots across all streets compared on rows, starting score and win chance with the same random sequence, no difference.
