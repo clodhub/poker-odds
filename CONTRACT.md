@@ -6,7 +6,7 @@ Answers three questions about a player's two hole cards and the board. `rows`: w
 Facilities: `poker-odds` (Hand improvement and winning chances).
 
 ## User inputs
-The installer collects two optional integers:
+The installer collects two optional settings. `sampleBoards` is how many possible boards are tried before the flop, when more than two cards are still to come (whole number of at least 1; default 2000): more gives steadier percentages and takes longer; after the flop every possible board is counted, so it does not apply. `cacheSize` is how many results are kept so that a player looking at the same cards again gets the answer at once (whole number of at least 1; default 500).
 
 - `sampleBoards` (integer; optional; default `2000`)
 - `cacheSize` (integer; optional; default `500`)
