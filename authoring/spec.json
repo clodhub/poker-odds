@@ -1,6 +1,7 @@
 {
   "name": "poker-odds",
-  "version": "0.11.0",
+  "version": "0.12.0",
+  "sourceRevision": "19905b75dbea89fbfd424d67fe26c81aaed0e018",
   "title": "Poker odds",
   "description": "Winning and improvement chances for teaching and display: what a hand can still become with the exact chance, the chance of holding the best hand against opponents, and Chen's starting score.",
   "facilities": [
@@ -12,7 +13,7 @@
   "provides": [
     {
       "id": "poker-odds",
-      "type": "ae/poker-odds",
+      "type": "com.clodhub/poker-odds",
       "version": "1.0.0",
       "path": "interfaces/poker-odds.json"
     }
@@ -20,13 +21,13 @@
   "requires": [
     {
       "id": "hand-ranking",
-      "type": "ae/hand-ranking",
+      "type": "com.clodhub/hand-ranking",
       "version": "1.0.0",
       "path": "interfaces/required-hand-ranking.json"
     },
     {
       "id": "card-deck",
-      "type": "ae/card-deck",
+      "type": "com.clodhub/card-deck",
       "version": "1.0.0",
       "path": "interfaces/required-card-deck.json"
     }
@@ -101,13 +102,13 @@
   "classes": [
     {
       "reference": {
-        "name": "clodhub/poker-odds-class",
+        "name": "pkg:clod/com.clodhub/poker-odds-class",
         "version": "1.1.0",
-        "digest": "f0bd43603f8c506f7265130438433fe094ed3f09e39d8e90371dd9d5c6c1c1be"
+        "digest": "603e654d3ea71caef3a772eb8892d89a3de7989b526a40cd47bdd25753fe44f7"
       },
       "descriptor": {
-        "format": 2,
-        "name": "clodhub/poker-odds-class",
+        "format": 3,
+        "name": "pkg:clod/com.clodhub/poker-odds-class",
         "version": "1.1.0",
         "title": "Poker odds",
         "summary": "Winning chances of each hand from the cards that are known",
@@ -115,7 +116,7 @@
         "presentation": "none",
         "provides": [
           {
-            "type": "ae/poker-odds",
+            "type": "com.clodhub/poker-odds",
             "version": "1.0.0",
             "path": "classes/poker-odds-class/poker-odds.json",
             "modules": {
@@ -127,11 +128,11 @@
         ],
         "requires": [
           {
-            "type": "ae/hand-ranking",
+            "type": "com.clodhub/hand-ranking",
             "version": "1.0.0"
           },
           {
-            "type": "ae/card-deck",
+            "type": "com.clodhub/card-deck",
             "version": "1.0.0"
           }
         ],
@@ -158,11 +159,11 @@
           },
           {
             "path": "classes/poker-odds-class/poker-odds.json",
-            "digest": "660568833de47e06371d675b5d3a82f08efe89e0636ad6f19b5b9cec67e16bd9"
+            "digest": "ff689ab8b0f53407c3ed91418418f7db8913ddf5ee8ed519478c1160b02a650e"
           },
           {
             "path": "classes/poker-odds-class/runtime.mjs",
-            "digest": "7440f3891614c423f74668cb5a2445fea58bbfa4d7c740c8e8a855d1d9300d43"
+            "digest": "1d85f0dae92d5c6c859cd48a4211a933718ae3e168554a2b00806183c4b661f0"
           }
         ],
         "verification": [
@@ -194,9 +195,9 @@
   ],
   "implements": [
     {
-      "name": "clodhub/poker-odds-class",
+      "name": "pkg:clod/com.clodhub/poker-odds-class",
       "version": "1.1.0",
-      "digest": "f0bd43603f8c506f7265130438433fe094ed3f09e39d8e90371dd9d5c6c1c1be"
+      "digest": "603e654d3ea71caef3a772eb8892d89a3de7989b526a40cd47bdd25753fe44f7"
     }
   ],
   "upstream": [],
